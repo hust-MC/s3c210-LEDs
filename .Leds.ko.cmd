@@ -1,0 +1,1 @@
+cmd_/root/android/workspace/leds/Leds.ko := arm-linux-ld -EL -r  -T /root/android/source_code/linux-3.0.8/scripts/module-common.lds --build-id  -o /root/android/workspace/leds/Leds.ko /root/android/workspace/leds/Leds.o /root/android/workspace/leds/Leds.mod.o
