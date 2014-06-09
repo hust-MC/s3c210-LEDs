@@ -41,7 +41,7 @@ static ssize_t word_count_write(struct file *file, const char __user *buf,
 	}
 	if (a = (copy_from_user(tmp, buf, n)))
 	{
-		printk("%d", a);
+		return -EFAULT;
 	}
 	for (i = 0; i < 4; i++)
 	{
@@ -53,6 +53,7 @@ static ssize_t word_count_write(struct file *file, const char __user *buf,
 			gpio_set_value(led_gpios[i], 1);
 		}
 	}
+	printk("write success\n");
 	return count;
 }
 
